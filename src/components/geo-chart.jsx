@@ -1,7 +1,6 @@
+// https://react-google-charts.com/geo-chart#region-geocharts
 import { useState } from "react";
 import { Chart } from "react-google-charts";
-
-// https://react-google-charts.com/geo-chart#region-geocharts
 const GeoChart = () => {
   const [state, setState] = useState([
     ["Country", "Popularity"],

@@ -1,30 +1,6 @@
-import React, { useState } from "react";
 import { Bubble } from "react-chartjs-2";
 
 const BubbleChart = () => {
-  const [state, setState] = useState([
-    {
-      x: 20,
-      y: 30,
-      r: 15,
-    },
-    {
-      x: 30,
-      y: 20,
-      r: 15,
-    },
-    {
-        x: 0,
-        y: 20,
-        r: 5,
-      },
-    {
-      x: 40,
-      y: 10,
-      r: 10,
-    },
-  ]);
-
   const style = {
     width: "1000px",
     margin: "0 auto",
@@ -35,19 +11,47 @@ const BubbleChart = () => {
       <div style={style}>
         <Bubble
           data={{
-            // labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
             datasets: [
               {
                 label: "CMC Global",
-                data: state,
+                data:  [{
+                  x: 20,
+                  y: 30,
+                  r: 15
+                }, {
+                  x: 40,
+                  y: 20,
+                  r: 10
+                }],
                 backgroundColor: [
                   "green",
+                  // "red",
+                  // "purple",
+                  // "yellow",
+                ],
+                borderWidth: 1,
+                borderColor: "#777",
+                hoverBorderWidth: 3,
+                hoverBorderColor: "#000",
+              },
+
+              {
+                label: "CMC Global 2",
+                data:  [{
+                  x: 0,
+                  y: 30,
+                  r: 15
+                }, {
+                  x: 50,
+                  y: 20,
+                  r: 10
+                }],
+                backgroundColor: [
+                  // "green",
                   "red",
-                  "purple",
-                  "yellow",
-                  "pink",
-                  "brown",
-                  "black",
+                  // "purple",
+                  // "yellow",
+                  
                 ],
                 borderWidth: 1,
                 borderColor: "#777",
@@ -56,8 +60,6 @@ const BubbleChart = () => {
               },
             ],
           }}
-          // width={100}
-          // height={40}
         />
       </div>
     </>

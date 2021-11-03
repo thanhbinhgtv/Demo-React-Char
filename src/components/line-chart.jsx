@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Line } from "react-chartjs-2";
 
 const LineChart = () => {
-  const [state, setState] = useState([100, 140, 500, 400, 200, 600,100, 140, 500, 400, 200, 600]);
+  const [state, setState] = useState([300, 140, 500, 400, 200, 600,100, 140, 500, 400, 200, 600]);
   const style = {
     width: "600px",
     margin: "0 auto",
@@ -20,16 +20,10 @@ const LineChart = () => {
                 data: state,
                 backgroundColor: [
                   "blue",
-                  "red",
-                  "purple",
-                  "yellow",
-                  "pink",
-                  "brown",
-                  "black",
                 ],
                 tension: 0.3,
                 borderWidth: 1,
-                borderColor: "#777",
+                borderColor: "blue",
                 hoverBorderWidth: 3,
                 hoverBorderColor: "#000",
               },
