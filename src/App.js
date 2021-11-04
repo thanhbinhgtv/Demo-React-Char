@@ -1,13 +1,18 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, useHistory } from "react-router-dom";
 import AnnotationChart from "./components/annotation-chart";
 import BubbleChart from "./components/bubble-chart";
 import ColumnChart from "./components/column-chart";
 import GeoChart from "./components/geo-chart";
+import GeoChart2 from "./components/geo-chart2";
 import LineChart from "./components/line-chart";
 import PieChart from "./components/pie-chart";
 import TreeMapChart from "./components/tree-map-chart";
 
 function App() {
+const useHistory = () => {
+  const test = useHistory();
+}
+
   return (
     <Router>
       <div>
@@ -22,6 +27,9 @@ function App() {
         </Link>
         <Link to="/geo">
           <button>Geo</button>
+        </Link>
+        <Link to="/geo2">
+          <button>Geo 2</button>
         </Link>
         <Link to="/column">
           <button>Column</button>
@@ -49,6 +57,9 @@ function App() {
           </Route>
           <Route path="/geo">
             <GeoChart />
+          </Route>
+          <Route path="/geo2">
+            <GeoChart2 />
           </Route>
           <Route path="/column">
             <ColumnChart />
