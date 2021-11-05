@@ -1,6 +1,6 @@
 import AnyChart from 'anychart-react'
 import { useEffect } from 'react';
-
+// https://www.anychart.com/products/anymap/gallery/Maps_General_Features/World_Bubble_Map.php
 const GeoChart3 = () => {
   
   const style = {
