@@ -5,6 +5,7 @@ import ColumnChart from "./components/column-chart";
 import GeoChart from "./components/geo-chart";
 import GeoChart2 from "./components/geo-chart2";
 import GeoChart3 from "./components/geo-chart3";
+import HistogramChart from "./components/histogram-chart";
 import LineChart from "./components/line-chart";
 import PieChart from "./components/pie-chart";
 import TreeMapChart from "./components/tree-map-chart";
@@ -41,6 +42,9 @@ const useHistory = () => {
         <Link to="/tree-map">
           <button>Tree Map</button>
         </Link>
+        <Link to="/histogram">
+          <button>Histogram</button>
+        </Link>
         <Link to="/annotation">
           <button>Annotation</button>
         </Link>
@@ -73,6 +77,9 @@ const useHistory = () => {
           </Route>
           <Route path="/tree-map">
             <TreeMapChart />
+          </Route>
+          <Route path="/histogram">
+            <HistogramChart />
           </Route>
           <Route path="/annotation">
             <AnnotationChart />
