@@ -3,7 +3,7 @@ import { Chart } from "react-google-charts";
 
 const HistogramChart = () => {
   const style = {
-    width: "400px",
+    width: "800px",
     margin: "0 auto",
   };
 
@@ -11,8 +11,8 @@ const HistogramChart = () => {
     <>
       <div style={style}>
         <Chart
-          width={"500px"}
-          height={"300px"}
+          width={"800px"}
+          height={"500px"}
           chartType="Histogram"
           loader={<div>Loading Chart</div>}
           data={[
