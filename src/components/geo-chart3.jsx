@@ -112,7 +112,7 @@ const GeoChart3 = () => {
             return (
               <Marker coordinates={[sample.long, sample.lat]}>
                 <circle r={sample.rad} fill={sample.color} />
-                <text>{sample.rad}</text>
+                <text>{sample.region}</text>
               </Marker>
             );
           })}
